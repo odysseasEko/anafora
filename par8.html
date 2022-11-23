@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Anafora</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Anafora</h1>
+</header>
+<h1 id="οδυσσέας-οικονόμου-π2019060">Οδυσσέας Οικονόμου Π2019060</h1>
+<h3 id="second-time-is-the-charm">Second Time Is The Charm</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Εβδομάδα</th>
+<th><a href="https://courses-ionio.github.io/help/deliverables/">Όλα τα
+παραδοτέα βρίσκονται στην ίδια σελίδα της τελικής αναφοράς</a> με τα
+προσωπικά στοιχεία σας (Όνομα, ΑΜ, github profile) και μαζί με αυτόν εδώ
+τον πίνακα περιεχομένων</th>
+<th>Σύνδεσμος στην εβδομαδιαία παρουσίαση προόδου στις συζητήσεις</th>
+<th>Αυτοαξιολόγηση σύμφωνα με τα κριτήρια της αντίστοιχης άσκησης</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><a
+href="https://github.com/courses-ionio/hci/discussions/1794">Δημιουργία
+ομάδας</a> + <a href="https://courses-ionio.github.io/help/guide/">Φορκ
+και δημιουργία σελίδας τελικής αναφοράς</a>, <a
+href="https://raw.githubusercontent.com/courses-ionio/hci/master/README.md">προσθήκη
+πίνακα περιεχομένων</a>, <a
+href="https://courses-ionio.github.io/help/intro/">συγγραφή της
+εισαγωγής</a>, αποστολή της εισαγωγής <a
+href="https://github.com/courses-ionio/help/discussions/categories/show-and-tell">για
+σχολιασμό στην συζήτηση</a> και καταγραφή του συνδέσμου συζήτησης δίπλα
+–&gt;</td>
+<td>Συζήτηση:<br/> <a
+href="https://github.com/courses-ionio/help/discussions/836">παραδοτέο
+1ο</a></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Άσκηση γραμμής εντολών (linux install)</td>
+<td>Συζήτηση:<br/><a
+href="https://github.com/courses-ionio/help/discussions/1032">παραδοτέο
+2ο</a></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Συμμετοχικό περιεχόμενο A1</td>
+<td>Συζήτηση:<br/><a
+href="https://github.com/courses-ionio/help/discussions/1168">παραδοτέο
+3ο</a><br/></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Άσκηση γραμμής εντολών (warm up cli)</td>
+<td>Συζήτηση:<br/><a
+href="https://github.com/courses-ionio/help/discussions/1307">παραδοτέο
+4ο</a><br/></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Συμμετοχικό περιεχόμενο A2</td>
+<td>Συζήτηση:<br/><a
+href="https://github.com/courses-ionio/help/discussions/1443">παραδοτέο
+5ο</a><br/></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Κατασκευή του βιβλίου Α</td>
+<td>Συζήτηση:<br/><a
+href="https://github.com/courses-ionio/help/discussions/1581">παραδοτέο
+6ο</a></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Συμμετοχικό περιεχόμενο B1</td>
+<td>Συζήτηση:<br/><a
+href="https://github.com/courses-ionio/help/discussions/1692">παραδοτέο
+7ο</a></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Άσκηση γραμμής εντολών</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Συμμετοχικό περιεχόμενο B2</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Άσκηση γραμμής εντολών</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Κατασκευή του βιβλίου Β</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Τελική αναφορά*</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="team">Team</h1>
+<h2 id="second-time-is-the-charm-1"><a
+href="https://github.com/Second-Time-is-the-Charm">Second Time Is The
+Charm</a></h2>
+<h2 id="meet-our-team-we-dont-accept-new-members-at-the-moment">Meet Our
+Team (We don’t accept new members at the moment!)</h2>
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 10%" />
+<col style="width: 36%" />
+<col style="width: 23%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Members</th>
+<th>Roles</th>
+<th>First &amp; Last name</th>
+<th>Id</th>
+<th>Account link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Voltmaister</td>
+<td>Admin</td>
+<td>Orestis Artinopoulos</td>
+<td>P2019153</td>
+<td><a href="https://github.com/voltmaister">Know me!</a></td>
+</tr>
+<tr class="even">
+<td>Markedd</td>
+<td>Member</td>
+<td>Dimitra Markou</td>
+<td>P2019170</td>
+<td><a href="https://github.com/marked-d">Know me!</a></td>
+</tr>
+<tr class="odd">
+<td>NickLitharis</td>
+<td>Member</td>
+<td>Nikos Litharis</td>
+<td>P2019083</td>
+<td><a href="https://github.com/NickLitharis">Know me!</a></td>
+</tr>
+<tr class="even">
+<td>KonstantinosT</td>
+<td>Member</td>
+<td>Konstantinos Tourtsakis</td>
+<td>P2019140</td>
+<td><a href="https://github.com/KonstantinosTourtsakis">Know
+me!</a></td>
+</tr>
+<tr class="odd">
+<td>odysseasEko</td>
+<td>Member</td>
+<td>Odysseas Oikonomou</td>
+<td>P2019060</td>
+<td><a href="https://github.com/odysseasEko/">Know me!</a></td>
+</tr>
+<tr class="even">
+<td>artopodama</td>
+<td>Member</td>
+<td>Giannis Anastasopoulos</td>
+<td>inf2021017</td>
+<td><a href="https://github.com/artopodama/">Know me!</a></td>
+</tr>
+<tr class="odd">
+<td>Angeloth1</td>
+<td>Member</td>
+<td>Angelos Thomos</td>
+<td>P2019095</td>
+<td><a href="https://github.com/Angeloth1/">Know me!</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="παραδοτέο-1ο">Παραδοτέο 1ο</h1>
+<p>Οι στόχοι μου για αυτό το μάθημα είναι η κατανόηση της διάδρασης, με
+αυτές τις γνώσεις θα επιδιώξω να βρω τρόπους να εφαρμοστεί στην
+καθημερινότητα. Πιο συγκεκριμένα θέλω να ασχοληθώ με το hardware που
+χρησιμοποιούμε για την επικοινωνία με τον υπολογιστή. Θα ερευνήσω πως
+αναπτύχθηκαν ιστορικά, αλλά και πως κάποια πρωτοπόρα εργαλεία μπορούν να
+βελτιστοποιήσουν την αλληλεπίδραση μας με τον υπολογιστή. Επιπλέον, θέλω
+να αναπτύξω τις ικανότητές μου στην ομαδικότητα. Για να πετύχω αυτούς
+τους στόχους θα χρησιμοποιήσω γνωστά εργαλεία, όπως το github και το
+λειτουργικό arch.</p>
+<h1 id="παραδοτεο-2ο">Παραδοτεο 2ο</h1>
+<h2 id="άσκηση-γραμμής-εντολών-linux-install">Άσκηση γραμμής εντολών
+(linux install)</h2>
+<p>Για αυτό το παραδοτέο εγκατέστησα τα arch με window manager bspwm σε
+εναν κενο σκληρο δισκο, και ετρεξα journalctl και neofetch.<br/>
+neofetch: <a href="https://asciinema.org/a/528047"><img
+src="https://asciinema.org/a/528047.svg" alt="asciicast" /></a></br>
+journalctl: <a href="https://asciinema.org/a/528054"><img
+src="https://asciinema.org/a/528054.svg" alt="asciicast" /></a></p>
+<h1 id="παραδοτέο-3ο">Παραδοτέο 3ο</h1>
+<h2 id="συμμετοχικό-περιεχόμενο-a1">Συμμετοχικό περιεχόμενο A1</h2>
+<p>Σε αυτό το παραδοτέο αρχικά έκανα deploy το site από το προσωπικό μου
+fork για testing. Πρόσθεσα στο βιβλίο το RiscOS και το DeskMate, αφού
+είδα πως δούλευαν κανονικά έκανα pull request στον οργανισμό για
+ενσωμάτωση των .md αρχείων και των εικόνων στο site του οργανισμού.
+Κάποια απο τα προβληματα που αντιμετωπίσα ηταν το ruby version του
+server.<br/><br/> <a
+href="https://stitc-site.netlify.app/gallery/risc-os/">RiscOS</a><br/>
+<a
+href="https://stitc-site.netlify.app/gallery/deskmate/">DeskMate</a><br/>
+<a
+href="https://github.com/Second-Time-Is-The-Charm/_gallery/pull/2#issue-1416972816">Pull
+request gallery</a><br/><a
+href="https://github.com/Second-Time-Is-The-Charm/images/pull/2#issue-1416977144">Pull
+request images</a><br/><br/> Έγινε revision στο riscOS διότι η εικόνα
+δεν ήταν αντιπροσοπευτική.<br/><br/> Σε αυτό το update προστέθηκε το <a
+href="https://illustrious-fenglisu-832564.netlify.app/gallery/oculus-rift/">Oculus
+Rift</a> στο site διότι είναι πιο κοντά στο θέμα που θέλω να
+ασχοληθώ.</p>
+<h1 id="παραδοτεο-4ο">Παραδοτεο 4ο</h1>
+<h2 id="warm-up">Warm-Up</h2>
+<h3 id="sampler">Sampler</h3>
+<p>Το Sampler είναι ένα πρόγραμμα terminal το οποιο εχει πολλες
+δυνατοτητες παρακολούθησης του συστήματος του χρηστη αλλα και server.
+Εγω το χρησιμοποιήσω για να παρακολουθω τον επεξεργαστη μου και τον
+χρονο.</p>
+<p><a href="https://asciinema.org/a/YSqF5OyDI7Z7tgG4ro556EUPH"><img
+src="https://asciinema.org/a/YSqF5OyDI7Z7tgG4ro556EUPH.svg"
+alt="asciicast" /></a></p>
+<h3 id="googler">Googler</h3>
+<p>Το Googler ειναι ενα implementation του google search σε terminal με
+πιο εξειδικευμενους τρόπους αναζήτησης πχ αναζητηση σε ενα website και
+συγκεκριμενου filetype. Εγω εκανα μια αναζητηση απλη και μια ακόμα, με
+target το skroutz.gr.</p>
+<p><a href="https://asciinema.org/a/8c66eo1dSP4Idw4rOKexTY360"><img
+src="https://asciinema.org/a/8c66eo1dSP4Idw4rOKexTY360.svg"
+alt="asciicast" /></a></p>
+<h3 id="εγκατάσταση">Εγκατάσταση</h3>
+<p>Και τα δυο προγραμματα εγκατασταθηκαν μεσω terminal με χρηση του yay
+Sampler Install:</p>
+<p><a href="https://asciinema.org/a/70PjoLJNu1xauafRf7FteEOYU"><img
+src="https://asciinema.org/a/70PjoLJNu1xauafRf7FteEOYU.svg"
+alt="asciicast" /></a></p>
+<p>Googler Install:</p>
+<p><a href="https://asciinema.org/a/k3y22dB5YlXhSY5oK6LFjwi6j"><img
+src="https://asciinema.org/a/k3y22dB5YlXhSY5oK6LFjwi6j.svg"
+alt="asciicast" /></a></p>
+<h1 id="παραδοτέο-5ο">Παραδοτέο 5ο</h1>
+<h2 id="συμμετοχικό-περιεχόμενο-α2">Συμμετοχικό Περιεχόμενο Α2</h2>
+<p>Για το 5ο Παραδοτέο προσέθεσα ένα σετ από θεματικές διαφάνειες το
+οποίο ονόμασα λειτουργικά συστήματα, μέσα σε αυτές έβαλα το RiscOS το
+οποίο είχα προσθέσει σε προηγούμενη βδομάδα και άλλα ήδη υπάρχοντα
+λειτουργικά. Επίσης, άλλα άτομα από την ομάδα μου προσέθεσαν δικά τους
+λειτουργικά στο slide μου. Επιπλέον, έβαλα το DeskMate από το παραδοτέο
+3 στις διαφάνειες για τη Γραφική διεπαφή χρήστη.<br/> Το χρονολογιο που
+έφτιαξα είναι για φορητούς υπολογιστές. Δυστυχώς, άργησα πολύ να
+καταλάβω ότι υπάρχει ήδη ένα αντίστοιχο χρονολογιο αλλα θα διορθωθεί το
+λάθος σύντομα. Αφού τεστάρα αν δουλεύει στο προσωπικό μου site έκανα
+pull request στον οργανισμό για να μπουν στην ιστοσελίδα μας.<br/> Ένα
+πρόβλημα που αντιμετώπισα είναι πως επειδή τα updates γινόταν στο site
+και όχι σε κάποιο submodule, υπείχαν conflicts στο .gitmodules, αλλά το
+πρόβλημα αντιμετωπίστηκε εύκολα μέσω του github.<br/> <a
+href="https://stitc-site.netlify.app/slides/os/">Λειτουργικά
+συστήματα</a><br/> <a
+href="https://stitc-site.netlify.app/timeline/portable-computers/">Νέο
+Χρονολόγιo portable-computers</a><br/> <a
+href="https://stitc-site.netlify.app/slides/gui/">DeskMate
+adition</a><br/></p>
+<h1 id="παραδοτέο-6ο">Παραδοτέο 6ο</h1>
+<h2 id="βιβλίο">Βιβλίο</h2>
+<p>Για το 6ο παραδοτέο έφτιαξα ένα καινούριο φίλτρο lua (addition.lua)
+το οποίο προσθέτει πληροφορίες στο βιβλίο. Συγκεκριμένα η προσθήκη μου
+αφορά το έργο του Jaron Lanier και βρίσκετε στο κεφάλαιο 6.6. Έχω σκοπό
+να επεκτείνω πάνω σε αυτό γιατί είναι ακόμα πολύ απλό. Επίσης, έκανα τις
+απαραίτητες αλλαγές στο make-latex.sh για να περιλαμβάνει το φίλτρο μου
+και κάποια διαφορετικά fonts.</p>
+<p><a
+href="https://github.com/odysseasEko/kallipos/blob/master/book.pdf">PDF</a><br/>
+<a
+href="https://github.com/odysseasEko/kallipos/blob/master/addition.lua">Φίλτρο</a><br/>
+<a
+href="https://github.com/odysseasEko/kallipos/blob/master/additions/data-glove.md">Προσθήκη</a><br/></p>
+<figure>
+<img
+src="https://user-images.githubusercontent.com/73399706/202736400-e4494ab9-a7ce-4eb9-adb6-5c6caf5c6255.png"
+alt="book screenshot" />
+<figcaption aria-hidden="true">book screenshot</figcaption>
+</figure>
+<h1 id="παραδοτεο-7ο">Παραδοτεο 7ο</h1>
+<h3 id="case-study">case study</h3>
+<p>Για το case study μου αποφάσισα να γράψω για τη διεπαφή χρήστη
+DeskMate την οποία έχω αναφέρει ξανά στο 3ο παραδοτέο. Δύστυχος
+αντιμετωπίζω κάποια προβλήματα με το netlify τα οποία όμως θα λύσω
+σύντομα. <br/> Github:<br/> <a
+href="https://github.com/odysseasEko/site/blob/master/_case-study/tandydeskmate.md">_case-study</a><br/>
+<a
+href="https://github.com/odysseasEko/site/blob/master/_includes/cs-deskmate.md">_includes</a><br/></p>
+</body>
+</html>
